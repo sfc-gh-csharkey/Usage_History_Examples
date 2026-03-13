@@ -6,12 +6,12 @@ The [Usage_History_Examples.sql](https://github.com/sfc-gh-csharkey/Usage_Histor
 
 The following is a table of each view, the corresponding Snowflake service and level of aggregation.
 
-| Snowflake Service | Usage Views                         | Level of Aggregation |  
-|-------------------|-------------------------------------| ---------------------|
-| Cortex Agents     | CORTEX_AGENT_USAGE_HISTORY          | Per request          |
-| Cortex Search     | CORTEX_SEARCH_SERVING_USAGE_HISTORY | Per hour             |
-| Cortex Search     | CORTEX_SEARCH_DAILY_USAGE_HISTORY   | Per day              |
-| Cortex Analyst    | CORTEX_ANALYST_REQUESTS_V           | Per request          |
-| Cortex Analyst    | CORTEX_ANALYST_USAGE_HISTORY        | Per hour             |
-| AI SQL Functions  | CORTEX_AISQL_USAGE_HISTORY          | Per request          |
-| Cortex Code       | CORTEX_CODE_CLI_USAGE_HISTORY       | Per request          |
+| Snowflake Service | Usage Views                                                                                                                          | Level of Aggregation | 
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------| ---------------------|
+| Cortex Agents     | [CORTEX_AGENT_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_agent_usage_history)                   | Per request          |
+| Cortex Search     | [CORTEX_SEARCH_SERVING_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_search_serving_usage_history) | Per hour             |
+| Cortex Search     | [CORTEX_SEARCH_DAILY_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_search_daily_usage_history)     | Per day              |
+| Cortex Analyst    | [CORTEX_ANALYST_REQUESTS_V](https://docs.snowflake.com/en/sql-reference/local/cortex_analyst_requests_v)                             | Per request          |
+| Cortex Analyst    | [CORTEX_ANALYST_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_analyst_usage_history)               | Per hour             |
+| AI SQL Functions  | [CORTEX_AISQL_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_aisql_usage_history)                   | Per request          |
+| Cortex Code       | CORTEX_CODE_CLI_USAGE_HISTORY                                                                                                        | Per request          |
