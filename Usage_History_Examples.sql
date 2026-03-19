@@ -72,3 +72,11 @@ FROM SNOWFLAKE.ACCOUNT_USAGE.CORTEX_CODE_CLI_USAGE_HISTORY c
 JOIN SNOWFLAKE.ACCOUNT_USAGE.USERS u ON c.USER_ID = u.USER_ID
 GROUP BY 1, 2
 ORDER BY 2 DESC;
+
+--
+-- Snowflake Intelligence
+-- 1. Per request usage | https://docs.snowflake.com/en/sql-reference/account-usage/snowflake_intelligence_usage_history_view
+-- 
+
+-- All feilds (per request)
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.SNOWFLAKE_INTELLIGENCE_USAGE_HISTORY
