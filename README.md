@@ -1,6 +1,6 @@
 # Usage History Examples
 
-<img width="85" alt="map-user" src="https://img.shields.io/badge/views-067-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-026-green">
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-067-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-031-green">
 
 Snowflake provides usage views that have details on the credit usage, token consumption etc. These views can be used to determine Snowflake costs.
 
