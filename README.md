@@ -19,3 +19,8 @@ The following is a table of each view, the corresponding Snowflake service and l
 | Cortex Code CLI       | [CORTEX_CODE_CLI_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_code_cli_usage_history)                      | Per request          |
 | Cortex Code Snowsight | [CORTEX_CODE_SNOWSIGHT_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_code_snowsight_usage_history)          | Per request          |
 | Snowflake Intelligence| [SNOWFLAKE_INTELLIGENCE_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/snowflake_intelligence_usage_history_view)   | Per request          |
+
+### Upcoming Updates
+* Which credit cost AI Credit vs. Warehouse Credit
+* How to determine warecredit consumption for AI SQL and Analyst
+* Any budgets we have 
