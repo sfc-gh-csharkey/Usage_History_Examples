@@ -4,12 +4,18 @@
 
 Snowflake provides usage views that have details on the credit usage, token consumption etc. These views can be used to determine Snowflake costs.
 
-The [Usage_History_Examples.sql](https://github.com/sfc-gh-csharkey/Usage_History_Examples/blob/main/Usage_History_Examples.sql) contain example queries using views for consumption on Cortex Agents, Cortex Search, Cortex Analyst, Cortex Code.
+The [Usage_History_Examples.sql](https://github.com/sfc-gh-csharkey/Usage_History_Examples/blob/main/Usage_History_Examples.sql) contains example queries using views for consumption on Cortex Agents, Cortex Search, Cortex Analyst, Cortex Code.
 
 The following is a table of each view, the corresponding Snowflake service and level of aggregation.
 
+Which view you should query to determine the cost of a request is determined by which Cortex service **the request(s) orginates from**. 
+
+For example if you prompt Snowflake Intelligence and it calls Cortex Agent, which calls a Cortex Search service etc. the total cost of this request (including the behind the usage of Agent, Search etc.) is included in the ```TOKEN_CREDITS``` feild of the Snowflake Intelligence usage view. 
+
+If you want to break down total credits used for a request the ```TOKENS_GRANULAR``` feilds in the usage view will detail how many of the total credits were consumped by which dependent services.
+
 | Snowflake Service     | Usage Views                                                                                                                                   | Level of Aggregation |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------|
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------- |----------------------|  
 | Cortex Agents         | [CORTEX_AGENT_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_agent_usage_history)                            | Per request          |
 | Cortex Search         | [CORTEX_SEARCH_SERVING_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_search_serving_usage_history)          | Per hour             |
 | Cortex Search         | [CORTEX_SEARCH_DAILY_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_search_daily_usage_history)              | Per day              |
@@ -19,8 +25,3 @@ The following is a table of each view, the corresponding Snowflake service and l
 | Cortex Code CLI       | [CORTEX_CODE_CLI_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_code_cli_usage_history)                      | Per request          |
 | Cortex Code Snowsight | [CORTEX_CODE_SNOWSIGHT_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/cortex_code_snowsight_usage_history)          | Per request          |
 | Snowflake Intelligence| [SNOWFLAKE_INTELLIGENCE_USAGE_HISTORY](https://docs.snowflake.com/en/sql-reference/account-usage/snowflake_intelligence_usage_history_view)   | Per request          |
-
-### Upcoming Updates
-* Which credit cost AI Credit vs. Warehouse Credit
-* How to determine warecredit consumption for AI SQL and Analyst
-* Any budgets we have 
